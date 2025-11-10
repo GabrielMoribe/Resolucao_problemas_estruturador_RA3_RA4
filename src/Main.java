@@ -1,3 +1,5 @@
+import algoritmos.BubbleSort;
+import algoritmos.InsertionSort;
 import algoritmos.QuickSort;
 import model.Biblioteca;
 import model.Jogo;
@@ -37,6 +39,7 @@ public class Main {
         //=================QUICKSORT=================
 
         // Ordenando jogos usando QuickSort por título
+        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
         QuickSort qs = new QuickSort();
         qs.quickSort(jogos, 0, jogos.length - 1, "titulo");
         System.out.println("\nJogos ordenados por título (QuickSort):");
@@ -45,34 +48,34 @@ public class Main {
         }
 
         // Ordenando jogos usando QuickSort por gênero
-//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
-//        qs.quickSort(jogos, 0, jogos.length - 1, "genero");
-//        System.out.println("\nJogos ordenados por genero (QuickSort):");
-//        for(Jogo jogo : jogos) {
-//            System.out.println(jogo);
-//        }
+       jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
+       qs.quickSort(jogos, 0, jogos.length - 1, "genero");
+       System.out.println("\nJogos ordenados por genero (QuickSort):");
+       for(Jogo jogo : jogos) {
+           System.out.println(jogo);
+       }
 
 
         //=================BUBBLESORT=================
 
-//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
-//        BubbleSort bs = new BubbleSort();
-//        bs.bubbleSort(jogos, "titulo");
-//        System.out.println("\nJogos ordenados por título (BubbleSort):");
-//        for(Jogo jogo : jogos) {
-//            System.out.println(jogo);
-//        }
+       jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
+       BubbleSort bs = new BubbleSort();
+       bs.bubbleSort(jogos, "titulo");
+       System.out.println("\nJogos ordenados por título (BubbleSort):");
+       for(Jogo jogo : jogos) {
+           System.out.println(jogo);
+       }
 
 
         //=================INSERTIONSORT=================
 
-//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
-//        InsertionSort is = new InsertionSort();
-//        is.insertionSort(jogos, "titulo");
-//        System.out.println("\nJogos ordenados por título (InsertionSort):");
-//        for(Jogo jogo : jogos) {
-//            System.out.println(jogo);
-//        }
+       jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
+       InsertionSort is = new InsertionSort();
+       is.insertionSort(jogos, "titulo");
+       System.out.println("\nJogos ordenados por título (InsertionSort):");
+       for(Jogo jogo : jogos) {
+           System.out.println(jogo);
+       }
 
     }
 }
