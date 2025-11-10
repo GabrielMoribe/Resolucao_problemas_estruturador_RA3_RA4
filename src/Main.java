@@ -39,34 +39,40 @@ public class Main {
         // Ordenando jogos usando QuickSort por título
         QuickSort qs = new QuickSort();
         qs.quickSort(jogos, 0, jogos.length - 1, "titulo");
-        System.out.println("\nJogos ordenados por título:");
+        System.out.println("\nJogos ordenados por título (QuickSort):");
         for(Jogo jogo : jogos) {
             System.out.println(jogo);
         }
 
         // Ordenando jogos usando QuickSort por gênero
+//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
 //        qs.quickSort(jogos, 0, jogos.length - 1, "genero");
-//        System.out.println("\nJogos ordenados por genero:");
-//        for(Jogo jogo : jogos) {
-//            System.out.println(jogo);
-//        }
-
-        // Ordenando jogos usando QuickSort por id
-//        qs.quickSort(jogos, 0, jogos.length - 1, "id");
-//        System.out.println("\nJogos ordenados por id:");
-//        for(Jogo jogo : jogos) {
-//            System.out.println(jogo);
-//        }
-
-        // Ordenando jogos usando QuickSort por Ano de lancamento
-//        qs.quickSort(jogos, 0, jogos.length - 1, "ano");
-//        System.out.println("\nJogos ordenados por Ano de lancamento:");
+//        System.out.println("\nJogos ordenados por genero (QuickSort):");
 //        for(Jogo jogo : jogos) {
 //            System.out.println(jogo);
 //        }
 
 
+        //=================BUBBLESORT=================
 
+//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
+//        BubbleSort bs = new BubbleSort();
+//        bs.bubbleSort(jogos, "titulo");
+//        System.out.println("\nJogos ordenados por título (BubbleSort):");
+//        for(Jogo jogo : jogos) {
+//            System.out.println(jogo);
+//        }
+
+
+        //=================INSERTIONSORT=================
+
+//        jogos = biblioteca.exportarParaVetor(); // Recarrega o vetor desordenado
+//        InsertionSort is = new InsertionSort();
+//        is.insertionSort(jogos, "titulo");
+//        System.out.println("\nJogos ordenados por título (InsertionSort):");
+//        for(Jogo jogo : jogos) {
+//            System.out.println(jogo);
+//        }
 
     }
 }
