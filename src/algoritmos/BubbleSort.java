@@ -10,7 +10,7 @@ public class BubbleSort {
         // Loop para percorrer o array
         for (int i = 0; i < n - 1; i++) {
             // Loop para comparar elementos adjacentes
-            for (int j = 0; j < n - i - 1; j++) {
+            for (int j = 0; j < n - i - 1; j++) { //Como cada iteração coloca o maior elemento no final, podemos ignorar os últimos i elementos
                 // Compara e troca se o elemento atual for maior que o próximo
                 if (comparar(array[j], array[j + 1], criterio) > 0) {
                     // Troca

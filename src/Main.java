@@ -10,9 +10,15 @@ public class Main {
 
         // Adicionando jogos à biblioteca
         biblioteca.adicionarJogo(new Jogo(1 , "Jogo 1", "Ação", 2020));
-        biblioteca.adicionarJogo(new Jogo(2 , "Jogo 3", "Aventura", 2019));
-        biblioteca.adicionarJogo(new Jogo(3 , "Jogo 2", "RPG", 2021));
-        biblioteca.adicionarJogo(new Jogo(4 , "Jogo 5", "Aventura", 2018));
+        biblioteca.adicionarJogo(new Jogo(2 , "Jogo 2", "Aventura", 2019));
+        biblioteca.adicionarJogo(new Jogo(3 , "Jogo 3", "RPG", 2021));
+        biblioteca.adicionarJogo(new Jogo(4 , "Jogo 4", "Aventura", 2018));
+        biblioteca.adicionarJogo(new Jogo(5 , "Jogo 5", "Ação", 2022));
+        biblioteca.adicionarJogo(new Jogo(6 , "Jogo 6", "RPG", 2023));
+        biblioteca.adicionarJogo(new Jogo(7 , "Jogo 7", "Aventura", 2024));
+        biblioteca.adicionarJogo(new Jogo(8 , "Jogo 8", "RPG", 2025));
+        biblioteca.adicionarJogo(new Jogo(9 , "Jogo 9", "Aventura", 2026));
+        biblioteca.adicionarJogo(new Jogo(10, "Jogo 10", "RPG", 2027));
 
         // Listando jogos na biblioteca
         System.out.println("\nJogos na biblioteca:");

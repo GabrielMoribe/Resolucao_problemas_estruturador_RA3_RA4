@@ -29,19 +29,63 @@ public class BibliotecaSwingApp extends JFrame {
         biblioteca = new Biblioteca();
 
         // Adicionar alguns jogos de exemplo
-        biblioteca.adicionarJogo(new Jogo(1, "Jogo 1", "RPG", 2020));
-        biblioteca.adicionarJogo(new Jogo(2, "Jogo 2", "Ação", 2013));
-        biblioteca.adicionarJogo(new Jogo(3, "Jogo 3", "Ação", 2011));
-        biblioteca.adicionarJogo(new Jogo(4, "Jogo 4", "Estratégia", 2018));
+        // Adicionando jogos à biblioteca
+//        biblioteca.adicionarJogo(new Jogo(1 , "Jogo 1", "Ação", 2020));
+//        biblioteca.adicionarJogo(new Jogo(2 , "Jogo 2", "Aventura", 2019));
+//        biblioteca.adicionarJogo(new Jogo(3 , "Jogo 3", "RPG", 2021));
+//        biblioteca.adicionarJogo(new Jogo(4 , "Jogo 4", "Aventura", 2018));
+//        biblioteca.adicionarJogo(new Jogo(5 , "Jogo 5", "Ação", 2022));
+//        biblioteca.adicionarJogo(new Jogo(6 , "Jogo 6", "RPG", 2023));
+//        biblioteca.adicionarJogo(new Jogo(7 , "Jogo 7", "Aventura", 2024));
+//        biblioteca.adicionarJogo(new Jogo(8 , "Jogo 8", "RPG", 2025));
+//        biblioteca.adicionarJogo(new Jogo(9 , "Jogo 9", "Aventura", 2026));
+//        biblioteca.adicionarJogo(new Jogo(10, "Jogo 10", "RPG", 2027));
+
+
 
         System.out.println("Biblioteca criada com " + biblioteca.getTamanho() + " jogos");
 
         inicializarInterface();
         System.out.println("Interface inicializada");
 
+        gerarDadosDeTeste(1000); // Para 1000 jogos
+
         atualizarTabela();
         System.out.println("Tabela atualizada - Aplicação pronta!");
     }
+
+    private void gerarDadosDeTeste(int quantidade) {
+        // Limpar biblioteca atual
+        biblioteca = new Biblioteca();
+
+        String[] titulos = {
+                "Call of Duty", "FIFA", "Grand Theft Auto", "The Legend of Zelda", "Super Mario",
+                "Minecraft", "Fortnite", "Assassin's Creed", "World of Warcraft", "Counter-Strike",
+                "League of Legends", "Overwatch", "Red Dead Redemption", "The Witcher", "Cyberpunk",
+                "Final Fantasy", "God of War", "Halo", "Doom", "Battlefield", "Elder Scrolls",
+                "Fallout", "Resident Evil", "Silent Hill", "Metal Gear Solid", "Dark Souls",
+                "Bloodborne", "Sekiro", "Elden Ring", "Pokemon", "Animal Crossing", "Splatoon"
+        };
+
+        String[] generos = {
+                "Ação", "Aventura", "RPG", "Estratégia", "Simulação", "Esporte", "Corrida",
+                "Puzzle", "Plataforma", "Luta", "Terror", "Sobrevivência", "MMORPG", "FPS"
+        };
+
+        java.util.Random random = new java.util.Random();
+
+        for (int i = 1; i <= quantidade; i++) {
+            String titulo = titulos[random.nextInt(titulos.length)] + " " + i;
+            String genero = generos[random.nextInt(generos.length)];
+            int ano = 1990 + random.nextInt(35); // Anos de 1990 a 2024
+
+            biblioteca.adicionarJogo(new Jogo(i, titulo, genero, ano));
+        }
+
+        atualizarTabela();
+        mostrarStatus("Gerados " + quantidade + " jogos de teste", false);
+    }
+
 
     private void inicializarInterface() {
         setTitle("Biblioteca de Jogos - Sistema de Gerenciamento");
